@@ -1,5 +1,6 @@
 import pytest
 from src.utils import randomWord
+from src.utils import validateWord
 
 
 def test_randomWord():
@@ -20,3 +21,19 @@ def test_randomWord_badLength():
     with pytest.raises(ValueError):
         randomWord(3)
     assert True
+
+
+def test_validateWord_BadequalsLenght():
+    """
+    Verifica que la palabra random y la del usuario sean de la misma longitud
+    """
+    word = validateWord("beach", randomWord(6))
+    assert len(word) != 5
+
+
+def test_validateWord():
+    """"
+    Verifica que la palabra exista en el diccionario
+    """
+    word = validateWord("prñad", randomWord(5))
+    assert word == ""
