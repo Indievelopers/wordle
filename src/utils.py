@@ -18,22 +18,20 @@ def randomWord(length: int) -> str:
 
 def validateWord(w, rWord):
 
-    # Guardo la palabra mandada por el usuario en una variable
-    # para después mandarla a la API del diccionario
-    word = w
+    # Mando la palabra del usuario a la API del diccionario
     r = requests.get(f'https://api.dictionaryapi.dev/api/v2/entries/en/{w}')
     # Verifica que si exista dentro del diccionario, si no es el caso,
     # la función retorna vacio
     if r.status_code <= 200:
         # Ya que se hizo la primera verifiación, se verifica que sea del mismo tamaño que la palabra a adivinar
-        if len(word) == len(rWord):
-            return word
+        if len(w) == len(rWord):
+            return True
         else:
             print("This word is not accepted")
-            return ""
+            return False
     else:
         print("This word is not accepted")
-        return ""
+        return False
 
 
 # if __name__ == "__main__":
