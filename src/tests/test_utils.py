@@ -32,7 +32,7 @@ def test_validateWord_BadequalsLenght():
 
 
 def test_validateWord():
-    """"
+    """
     Verifica que la palabra exista en el diccionario
     """
     _ = validateWord("prñad", randomWord(5))
