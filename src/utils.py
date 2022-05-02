@@ -34,5 +34,29 @@ def validateWord(w, rWord):
         return False
 
 
+def comparationWords(input_word, discover_word):
+    # Creo mi arreglo para guardar los numeros correspondientes de cada validación
+    # y un contador.
+    result = []
+    i = 0
+    # Inicio mi ciclo dentro de la palabra puesta por el usuario
+    for input in input_word:
+        # Valida si la letra no esta dentro de la palabra a descubrir.
+        # Regresa un 0
+        if input not in discover_word:
+            result.append(0)
+        # Valida si la letra está dentro de la palabra, pero no en la
+        # posición correcta. Regresa un 1
+        elif (input in discover_word) and discover_word[i] != input:
+            result.append(1)
+        # Valida si la letra está dentro de la palabra y en la
+        # posición correcta. Regresa un 2
+        elif (input in discover_word) and discover_word[i] == input:
+            result.append(2)
+        i += 1
+    return result
+
+
 # if __name__ == "__main__":
-#      print(validateWord(randomWord(5)))
+#      result = comparationWords("kcalb", "black")
+#      print(result)
