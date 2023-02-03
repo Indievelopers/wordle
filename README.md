@@ -8,7 +8,7 @@ El usuario al dar inicio al juego, se generara un cuadro de 5 columnas y 6 filas
 
 Cuándo se teclea alguna palabra dentro del rango, se debe verificar que sea una palabra que exista en el diccionario, despúes de la verificación, se va checando letra por letra, en donde habra tres posibilidades:
 
-- Si la letra no se ecnuentra en la palabra dada por el sistema, se pondra en un color gris.
+- Si la letra no se encuentra en la palabra dada por el sistema, se pondra en un color gris.
 - Si la letra esta en la posición correcta al igual que la palabra dada por el sistema, se pondra en un color verde.
 - Si la letra existe dentro la palabra, pero no se puso en la posición correcta, se pondra en un color amarillo.
 ![Diferentes casos para las letras](docs/images/spanish-wordle-how-to-2.jpg)
